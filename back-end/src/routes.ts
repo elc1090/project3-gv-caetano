@@ -8,7 +8,7 @@ router.get('/tournaments', TournamentController.ListTournaments)
 
 router.get('/seasons/:id', SeasonsController.ListSeasons)
 
-router.get('/matches/:seasonId', MatchesController.index)
+router.get('/matches', MatchesController.index)
 
 router.get('/get-tournament-loaded/:id', (req, res) => {
   res.send('return data from the tournament with id = ' + req.params.id)
