@@ -1,0 +1,37 @@
+.list-events {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.event-card {
+  width: 33%;
+  text-align: center;
+  border-style: solid;
+  border-radius: 5%;
+  background-color: #313132;
+}
+
+.event-card h1, h2 {
+  color: #FFBC2A;
+}
+
+.event-card:hover {
+  background-color: #525252;
+}
+
+.teams-summary {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.team-summary img {
+  width: 100px;
+  height: 100px;
+}
+
+.team-summary p {
+  color: white;
+}

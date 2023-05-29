@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 
-import ListItems from "../components/ListItems";
+import ListItems from "../components/ListItems/ListItems";
 
-const TEAM_QT = 20;
+const TEAM_QT = 18;
 
 const ListEvents = () => {
   const [matches, setMatches] = useState([]);
@@ -11,8 +11,8 @@ const ListEvents = () => {
     const lstMatches = [];
 
     for(let i = 0; i < TEAM_QT; i+=2) {
-      const team1 = { name: `TEAM_${i}`, img: 'https://cbissn.ibict.br/images/phocagallery/galeria2/thumbs/phoca_thumb_l_image03_grd.png', type: 'home' };
-      const team2 = { name: `TEAM_${i+1}`, img: 'https://cbissn.ibict.br/images/phocagallery/galeria2/thumbs/phoca_thumb_l_image03_grd.png', type: 'away' };
+      const team1 = { name: `TEAM_${i+1}`, img: 'https://cbissn.ibict.br/images/phocagallery/galeria2/thumbs/phoca_thumb_l_image03_grd.png', type: 'home' };
+      const team2 = { name: `TEAM_${i+2}`, img: 'https://cbissn.ibict.br/images/phocagallery/galeria2/thumbs/phoca_thumb_l_image03_grd.png', type: 'away' };
       const event = {
         Id: `${team1.name}-${team2.name}`,
         team1,
