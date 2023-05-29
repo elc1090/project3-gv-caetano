@@ -1,11 +1,11 @@
 import { Request, Response } from 'express'
 
 class TournamentController {
-  ListTournaments(res: Response) {
+  ListTournaments(req: Request, res: Response) {
     const result  = {
       data: "data"
     }
-    res.send(result)
+    res.json(result)
   } 
 }
 
