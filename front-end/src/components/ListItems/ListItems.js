@@ -1,15 +1,12 @@
-import { useNavigate } from 'react-router-dom';
-
 import './ListItems.css';
 
 const ListItems = ({ matches }) => {
-  const navigate = useNavigate();
 
   const renderItem = (event) => {
     const { home_team, away_team } = event;
 
     return(
-      <div className='event-card' onClick={() => navigate(`eventstats/${event.id}`)}>
+      <div className='event-card'>
         <h1>{`${home_team} x ${away_team}`}</h1>
         <h2>{new Date(event.date).toLocaleDateString()}</h2>
         <div className='teams-summary'>
