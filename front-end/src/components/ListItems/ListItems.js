@@ -6,26 +6,26 @@ const ListItems = ({ matches }) => {
   const navigate = useNavigate();
 
   const renderItem = (event) => {
-    const { team1, team2 } = event;
+    const { home_team, away_team } = event;
 
     return(
-      <div className='event-card' onClick={() => navigate(`eventstats/${event.Id}`)}>
-        <h1>{`${team1.name} x ${team2.name}`}</h1>
-        <h2>{event.date.toLocaleDateString()}</h2>
+      <div className='event-card' onClick={() => navigate(`eventstats/${event.id}`)}>
+        <h1>{`${home_team} x ${away_team}`}</h1>
+        <h2>{new Date(event.date).toLocaleDateString()}</h2>
         <div className='teams-summary'>
-          {renderTeamSummary(team1)}
-          {renderTeamSummary(team2)}
+          {renderTeamSummary(home_team, true)}
+          {renderTeamSummary(away_team, false)}
         </div>
       </div>
     );
   };
 
-  const renderTeamSummary = (team) => {
+  const renderTeamSummary = (team, isHomeTeam) => {
     return(
       <div className='team-summary'>
-        <p>{team.type === 'home' ? 'Em casa' : 'Fora'}</p>
-        <img src={team.img} alt={`Logo do time ${team.name}`}/>
-        <p>{team.name}</p>
+        <p>{isHomeTeam ? 'Em casa' : 'Fora'}</p>
+        <img src={team.img} alt={`Logo do time ${team}`}/>
+        <p>{team}</p>
       </div>
     );
   };

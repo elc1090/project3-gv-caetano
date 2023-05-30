@@ -2,29 +2,17 @@ import { useState, useEffect } from 'react';
 
 import ListItems from "../components/ListItems/ListItems";
 
-const TEAM_QT = 18;
-
 const ListEvents = () => {
   const [matches, setMatches] = useState([]);
 
+  const loadData = async () => {
+    const lstMatches = await fetch('https://proj3-ww06.onrender.com/matches');
+    const data  = await lstMatches.json();
+    setMatches([...data]);
+  };
+
   useEffect(() => {
-    const lstMatches = [];
-
-    for(let i = 0; i < TEAM_QT; i+=2) {
-      const team1 = { name: `TEAM_${i+1}`, img: 'https://cbissn.ibict.br/images/phocagallery/galeria2/thumbs/phoca_thumb_l_image03_grd.png', type: 'home' };
-      const team2 = { name: `TEAM_${i+2}`, img: 'https://cbissn.ibict.br/images/phocagallery/galeria2/thumbs/phoca_thumb_l_image03_grd.png', type: 'away' };
-      const event = {
-        Id: `${team1.name}-${team2.name}`,
-        team1,
-        team2,
-        date: new Date(new Date() - Math.random()*(1e+12)),
-      };
-
-      lstMatches.push(event);
-    }
-
-    setMatches([...lstMatches]);
-    console.log('lstMatches', lstMatches);
+    loadData();
   }, []);
 
   return(
