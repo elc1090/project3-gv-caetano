@@ -1,10 +1,8 @@
-import { useParams } from 'react-router-dom';
 
 const EventStats = () => {
-  const { eventId } = useParams();
   return(
     <div style={{color: 'white'}}>
-      <h1 >Evento {eventId}</h1>
+      <h1 >Evento</h1>
       <table style={{ borderStyle: 'solid', borderColor: 'white', textAlign: 'center', width: '50%'}}>
         <tr>
           <th>Time</th>
