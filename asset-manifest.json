@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/project3-gv-caetano/static/css/main.3396840a.css",
+    "main.js": "/project3-gv-caetano/static/js/main.af1c0e34.js",
+    "static/js/787.0c3f432a.chunk.js": "/project3-gv-caetano/static/js/787.0c3f432a.chunk.js",
+    "index.html": "/project3-gv-caetano/index.html",
+    "main.3396840a.css.map": "/project3-gv-caetano/static/css/main.3396840a.css.map",
+    "main.af1c0e34.js.map": "/project3-gv-caetano/static/js/main.af1c0e34.js.map",
+    "787.0c3f432a.chunk.js.map": "/project3-gv-caetano/static/js/787.0c3f432a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3396840a.css",
+    "static/js/main.af1c0e34.js"
+  ]
+}
