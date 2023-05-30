@@ -27,7 +27,6 @@ class SportsRadar {
   public async seasonSchedule(seasonId: number) {
     const subUrl = `/${this.languageCode}/seasons/sr:season:${seasonId}/schedules.${this.dataFormat}`
     const data = await this.get(subUrl)
-    console.log(data);
     
     return data.schedules
   }
